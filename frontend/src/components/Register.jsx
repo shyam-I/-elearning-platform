@@ -9,7 +9,7 @@ function Register() {
    return;
 }
 
-        fetch("http://localhost:5000/register", {
+        fetch("https://elearning-backend-k1bx.onrender.com/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
