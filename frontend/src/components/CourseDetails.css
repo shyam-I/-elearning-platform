@@ -1,0 +1,357 @@
+.course-details {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  background: #fdfdfd;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.course-left {
+  flex: 1.5;
+  min-width: 400px;
+}
+
+.course-right {
+  flex: 1;
+  min-width: 300px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  height: fit-content;
+}
+
+/* Video Section */
+.video-container {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  background: #000;
+  margin-bottom: 25px;
+}
+
+.enroll-placeholder {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f8f9ff;
+  border: 2px dashed #6c63ff;
+  border-radius: 12px;
+  text-align: center;
+  padding: 20px;
+}
+
+/* --- Roadmap Section & Progress --- */
+.roadmap-section {
+  margin-top: 40px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  border: 1px solid #f0f0f0;
+}
+
+.progress-container {
+  margin-bottom: 30px;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 12px;
+}
+
+.progress-header h3 {
+  margin: 0;
+  color: #1a1a1a;
+  font-size: 22px;
+}
+
+.progress-value {
+  text-align: right;
+}
+
+.progress-value .percent {
+  display: block;
+  font-size: 24px;
+  font-weight: 800;
+  color: #6c63ff;
+  line-height: 1;
+}
+
+.progress-value .label {
+  font-size: 12px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.main-progress-bar {
+  height: 10px;
+  background: #f0f2f5;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.main-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #6c63ff, #8b84ff);
+  border-radius: 5px;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.learning-goal-info {
+  margin-bottom: 30px;
+  padding: 10px 15px;
+  background: #f8f9ff;
+  border-left: 4px solid #6c63ff;
+  border-radius: 4px;
+}
+
+.learning-goal-info p {
+  margin: 0;
+  color: #4b5563;
+  font-size: 14px;
+}
+
+/* --- Phases and Modern Cards --- */
+.phases-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.roadmap-phase {
+  position: relative;
+}
+
+.roadmap-phase:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 40px;
+  bottom: -40px;
+  width: 2px;
+  background: #e5e7eb;
+  z-index: 0;
+}
+
+.phase-title {
+  font-size: 18px;
+  color: #111827;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  display: inline-block;
+  padding-right: 15px;
+}
+
+.phase-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.modern-step-card {
+  background: #fff;
+  border: 2px solid #f3f4f6;
+  border-radius: 16px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.modern-step-card:hover:not(.locked) {
+  border-color: #6c63ff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(108, 99, 255, 0.1);
+}
+
+.modern-step-card.active {
+  border-color: #6c63ff;
+  background: #f8f7ff;
+}
+
+.modern-step-card.completed {
+  border-color: #10b981;
+}
+
+.step-header {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.step-number-container {
+  min-width: 40px;
+  height: 40px;
+  background: #f3f4f6;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #6b7280;
+  transition: all 0.3s ease;
+}
+
+.modern-step-card.active .step-number-container {
+  background: #6c63ff;
+  color: #fff;
+}
+
+.modern-step-card.completed .step-number-container {
+  background: #10b981;
+  color: #fff;
+}
+
+.step-main-info {
+  flex-grow: 1;
+}
+
+.step-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 5px;
+}
+
+.step-meta {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.type-tag {
+  font-size: 12px;
+  color: #6b7280;
+  background: #f3f4f6;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.status-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.status-badge.done { background: #dcfce7; color: #15803d; }
+.status-badge.watching { background: #e0e7ff; color: #4338ca; }
+.status-badge.next { background: #fef9c3; color: #854d0e; }
+.status-badge.locked { background: #f3f4f6; color: #6b7280; }
+
+.step-details {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detail-item strong {
+  display: block;
+  font-size: 12px;
+  color: #9ca3af;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.active-glow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: #6c63ff;
+  box-shadow: -2px 0 10px rgba(108, 99, 255, 0.5);
+}
+
+.lock-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(1px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.lock-content {
+  text-align: center;
+  color: #9ca3af;
+}
+
+.lock-content span {
+  font-size: 24px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.lock-content p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.modern-step-card.locked {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+/* Certificate & Right Side */
+.certificate-section {
+  background: linear-gradient(135deg, #1f2937, #111827);
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.cert-btn {
+  background: #6c63ff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+.cert-btn:hover {
+  background: #5a52d5;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .course-details { flex-direction: column; padding: 20px; }
+  .course-left, .course-right { min-width: unset; }
+}

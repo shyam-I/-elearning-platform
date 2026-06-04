@@ -1,0 +1,38 @@
+.about-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.about-container h1 {
+  text-align: center;
+  font-size: 42px;
+  color: #12152d;
+  margin-bottom: 20px;
+}
+
+.about-container h2 {
+  color: #12152d;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.about-container p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+}
+
+.about-container ul {
+  margin-top: 15px;
+  padding-left: 25px;
+}
+
+.about-container li {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #333;
+}

@@ -1,0 +1,92 @@
+/* ===== FOOTER ===== */
+
+footer{
+    background-color: #f5f7fa;
+    padding: 60px 40px;
+}
+
+
+/* ===== MAIN CONTAINER ===== */
+
+.footer-container{
+    width: 100%;
+}
+
+
+/* ===== TOP SECTION ===== */
+
+.footer-top{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+
+/* ===== BOTTOM SECTION ===== */
+
+.footer-bottom{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+}
+
+
+/* ===== COLUMN HEADINGS ===== */
+
+.footer-column h2{
+    font-size: 22px;
+    margin-bottom: 22px;
+    color: #1f1f1f;
+}
+
+
+/* ===== COLUMN TEXT ===== */
+
+.footer-column p{
+    margin-bottom: 14px;
+    color: #5f6368;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-size: 16px;
+}
+
+
+/* ===== HOVER EFFECT ===== */
+
+.footer-column p:hover{
+    color: #0056d2;
+    transform: translateX(4px);
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:992px){
+
+    .footer-top{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .footer-bottom{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+
+@media(max-width:768px){
+
+    footer{
+        padding: 40px 20px;
+    }
+
+    .footer-top{
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom{
+        grid-template-columns: 1fr;
+    }
+
+}

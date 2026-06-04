@@ -1,0 +1,110 @@
+/* ===== SECTION ===== */
+
+section{
+    padding: 50px 40px;
+    background-color: #f8f9fb;
+}
+
+
+/* ===== HEADING ===== */
+
+section h2{
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 35px;
+    color: #1f1f1f;
+}
+
+
+/* ===== GRID CONTAINER ===== */
+
+.testimonial-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+}
+
+
+/* ===== CARD ===== */
+
+.testimonial-card{
+    background-color: white;
+    border: 1px solid #dcdcdc;
+    border-radius: 14px;
+    padding: 25px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+
+/* ===== HOVER EFFECT ===== */
+
+.testimonial-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.08);
+}
+
+
+/* ===== IMAGE + NAME ===== */
+
+.testimonial-image{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+
+/* ===== IMAGE ===== */
+
+.testimonial-image img{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* ===== NAME ===== */
+
+.testimonial-image h3{
+    font-size: 22px;
+    color: #222;
+}
+
+
+/* ===== REVIEW TEXT ===== */
+
+.testimonial-card p{
+    font-size: 18px;
+    line-height: 1.8;
+    color: #5f6368;
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:1200px){
+
+    .testimonial-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+
+@media(max-width:768px){
+
+    section{
+        padding: 40px 20px;
+    }
+
+    .testimonial-container{
+        grid-template-columns: 1fr;
+    }
+
+    section h2{
+        font-size: 30px;
+    }
+
+}
