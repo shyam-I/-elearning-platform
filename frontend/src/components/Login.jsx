@@ -32,7 +32,7 @@ function Login() {
           localStorage.setItem("userId", data.userId);
           localStorage.setItem("email", data.email);
           localStorage.setItem("isLoggedIn",true);
-          navigate("/dashboard");
+          navigate("/courses");
         } else {
           alert("Login failed!");
         }
