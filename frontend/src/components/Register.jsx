@@ -23,6 +23,7 @@ function Register() {
         .then((data) => {
             if (data.message === "User registered successfully") {
                 alert("Registration successful!");
+                navigate("/login");
             } else {
                 alert("Registration failed!");
             }
